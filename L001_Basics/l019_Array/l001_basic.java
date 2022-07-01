@@ -46,18 +46,50 @@ public class l001_basic {
     }
 
     public static boolean palindrome(int[] arr) {
+<<<<<<< HEAD
         
+=======
+        int i = 0, j = arr.length - 1;
+        while (i < j) {
+            if (arr[i] != arr[j])
+                return false;
+>>>>>>> 4bc871109b2a50275b42ff2b702657a9f08f5b29
 
+            i++;
+            j--;
+        }
+
+        return true;
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     public static void reverse(int[] arr) {
+        int i = 0, j = arr.length - 1;
+        while (i < j) {
+            swap(arr, i++, j--);
+        }
+    }
 
+    public static int[] inverse(int[] arr) {
+        int n = arr.length;
+        int[] ans = new int[n];
+        for (int i = 0; i < n; i++) {
+            ans[arr[i]] = i;
+        }
+
+        return ans;
     }
 
     public static void main(String[] args) {
         int n = scn.nextInt();
         int[] arr = new int[n]; // int[] arr = {10,20,-40,50,70,90,-89,-56};
         input1D(arr);
-
+        int[] ans = inverse(arr);
+        print1D(ans);
     }
 }
