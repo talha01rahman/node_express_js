@@ -39,6 +39,19 @@ public class l001_questions {
     }
 
     public static void main(String[] args) {
+        
+      int n = scn.nextInt();
+      int m = scn.nextInt();
+       //input1D(int[] arr)
+       int A[] = new int[n];
+       int B[] = new int[m];
+
+        input1D(A);
+        input1D(B);
+        
+       // sumOftwoArrays(int[] A, int[] B);
+        sumOftwoArrays(A,B);
+        
 
     }
 
