@@ -46,14 +46,10 @@ public class l001_basic {
     }
 
     public static boolean palindrome(int[] arr) {
-<<<<<<< HEAD
-        
-=======
         int i = 0, j = arr.length - 1;
         while (i < j) {
             if (arr[i] != arr[j])
                 return false;
->>>>>>> 4bc871109b2a50275b42ff2b702657a9f08f5b29
 
             i++;
             j--;
