@@ -13,6 +13,15 @@ public class l001 {
         }
     }
 
+    public static void print2d(int[][] arr) {
+        int n = arr.length, m = arr[0].length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.println(arr[i][j]);
+            }
+        }
+    }
+
     public static boolean find(int[][] arr, int data) {
         int n = arr.length, m = arr[0].length;
         for (int i = 0; i < n; i++) {
@@ -55,35 +64,42 @@ public class l001 {
 
     }
 
-    public static void printDiagonal(int[][] matrix, int n, int m){
+    // T: min(n,m)
+    public static void printDiagonal(int[][] matrix) {
+        int n = matrix.length, m = matrix[0].length;
+        int i = 0, j = 0;
+        while (i < n && j < m) {
+            System.out.println(matrix[i][j] + " ");
+            i++;
+            j++;
+        }
+    }
 
-        for(int r=0; r<n; r++){
-            for(int c=0; c<n; c++){
-                if(r==c){
-                    System.out.print(matrix[r][c]+" ");
-                }
-                System.out.println();
+    // two matrix of same dimension
+    // m1 += m2;
+    public static void addTwoMatrix(int[][] m1, int[][] m2) {
+        int n = matrix.length, m = matrix[0].length;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                m1[i][j] += m2[i][j];
             }
         }
     }
 
-    public static void addTwoMatrix(int[][] m1,int[][] m2){
-
-    }
-
-     
-
     public static void main(String[] args) {
         int n = scn.nextInt(), m = scn.nextInt();
         int[][] arr = new int[n][m];
-        input2d(arr);
-
+        input2d(m1);
+        input2d(m2);
+        addTwoMatrix(m1);
+        print2d(m1);
         // System.out.println(find(arr, scn.nextInt()));
         // System.out.println(maximum(arr));
         // System.out.println(minimum(arr));
         // System.out.println(sumOfAllElements(arr));
 
-        
+
     }
 
 }
