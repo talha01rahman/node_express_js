@@ -55,8 +55,16 @@ public class l001 {
 
     }
 
-    public static void printDiagonal(int[][] matrix){
+    public static void printDiagonal(int[][] matrix, int n, int m){
 
+        for(int r=0; r<n; r++){
+            for(int c=0; c<n; c++){
+                if(r==c){
+                    System.out.print(matrix[r][c]+" ");
+                }
+                System.out.println();
+            }
+        }
     }
 
     public static void addTwoMatrix(int[][] m1,int[][] m2){
@@ -70,10 +78,12 @@ public class l001 {
         int[][] arr = new int[n][m];
         input2d(arr);
 
-        System.out.println(find(arr, scn.nextInt()));
-        System.out.println(maximum(arr));
-        System.out.println(minimum(arr));
-        System.out.println(sumOfAllElements(arr));
+        // System.out.println(find(arr, scn.nextInt()));
+        // System.out.println(maximum(arr));
+        // System.out.println(minimum(arr));
+        // System.out.println(sumOfAllElements(arr));
+
+        
     }
 
 }
