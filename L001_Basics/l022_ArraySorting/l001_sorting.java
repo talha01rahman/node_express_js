@@ -60,6 +60,12 @@ public class l001_sorting {
             }
         }
     }
+    
+    public static void square(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            arr[i] = arr[i] * arr[i];
+        }
+    }
 
     public static void main(String[] args) {
         int n = scn.nextInt();
@@ -68,10 +74,16 @@ public class l001_sorting {
 
         System.out.print("Before Sorting: ");
         print(arr);
-
-        bubbleSort(arr);
-
+         
+        square(arr);
+        System.out.println();
+        System.out.print(" After Square: ");
+        print(arr);
+        bubbleSort_opti(arr);
+        System.out.println();
         System.out.print("After Sorting: ");
         print(arr);
     }
 }
+
+
