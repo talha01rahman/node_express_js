@@ -98,6 +98,7 @@ public class l001 {
         int n = matrix.length;
         for (int i = 0; i < n; i++) {
             int sum = sumOfEle(matrix[i]);
+            
         }
 
     }
