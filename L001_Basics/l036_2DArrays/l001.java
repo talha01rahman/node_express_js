@@ -68,19 +68,41 @@ public class l001 {
         }
     }
 
+    public static void reverseRowMatrix(int[][] matrix) {
+        int n = matrix.length, m = matrix[0].length;
+        int i = 0, j = n - 1;
+        while (i < j) {
+            swapRow(matrix, i++, j--);
+        }
+    }
+
     public static void clockWise90DegreeRotation(int[][] matrix) {
         transpose(matrix);
         reverseColumnMatrix(matrix);
     }
 
     public static void antiClockWise90DegreeRotation(int[][] matrix) {
-        
+        transpose(matrix);
+        reverseRowMatrix(matrix);
+    }
+
+    public static int sumOfEle(int[] arr) {
+        int sum = 0;
+        for (int ele : arr)
+            sum += ele;
+
+        return sum;
+    }
+
+    public static boolean equalSum(int[][] matrix) {
+        int n = matrix.length;
+        for (int i = 0; i < n; i++) {
+            int sum = sumOfEle(matrix[i]);
+        }
+
     }
 
     public static void main(String[] args) {
-        int[][] arr = input2d();
-        print2D(arr);
-        swapRow(arr, 0, 2);
-        print2D(arr);
+
     }
 }
