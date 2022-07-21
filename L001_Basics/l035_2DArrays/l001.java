@@ -58,11 +58,21 @@ public class l001 {
         arr[r1] = arr[r2];
         arr[r2] = temp;
     }
+     
+    public static void reverse(int[][] arr){
+       int n = arr.length; n=m;
 
+        for(int r=0; r<n; r++){
+            for(int c=0; c<m/2; c++){
+                swap2D(arr, r, c, r, m-1);
+                m--;
+            }
+        }
+    
     public static void main(String[] args) {
         int[][] arr = input2d();
         print2D(arr);
-        swapRow(arr, 0, 2);
+        reverse(arr);
         print2D(arr);
     }
 }
