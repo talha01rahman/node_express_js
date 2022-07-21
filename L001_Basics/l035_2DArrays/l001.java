@@ -48,23 +48,21 @@ public class l001 {
 
     // T: O(N), where N is no of rows
     public static void swapColumn(int[][] arr, int c1, int c2) {
-        int n = arr.length, m = arr[0].length;
-        int i=0;
-        while(i<n){
-            swap2D(arr, i, 0, i, 2);
-            i++;
-        }
+        for (int i = 0; i < arr.length; i++)
+            swap2D(arr, i, c1, i, c2);
     }
 
-    // T: O(??)
+    // T: O(1)
     public static void swapRow(int[][] arr, int r1, int r2) {
-
+        int[] temp = arr[r1];
+        arr[r1] = arr[r2];
+        arr[r2] = temp;
     }
 
     public static void main(String[] args) {
         int[][] arr = input2d();
         print2D(arr);
-        swapColumn(arr, 0, 2);
+        swapRow(arr, 0, 2);
         print2D(arr);
     }
 }
